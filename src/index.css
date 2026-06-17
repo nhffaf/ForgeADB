@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  @apply bg-surface-0 text-zinc-200 font-sans antialiased;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.18);
+  background-clip: padding-box;
+}
+
+@layer components {
+  .glass {
+    @apply bg-surface-2/70 backdrop-blur-xl border border-border;
+  }
+  .card {
+    @apply rounded-xl bg-surface-2 border border-border shadow-card;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-3.5 py-2 text-sm font-medium
+           transition-all duration-150 select-none disabled:opacity-40 disabled:cursor-not-allowed
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/60;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-zinc-300 hover:bg-surface-4 hover:text-white;
+  }
+  .btn-surface {
+    @apply btn bg-surface-3 text-zinc-200 border border-border hover:bg-surface-4 hover:border-border-strong;
+  }
+  .btn-brand {
+    @apply btn bg-brand text-black hover:bg-brand-dim shadow-[0_0_18px_rgba(61,220,132,0.25)];
+  }
+  .btn-danger {
+    @apply btn bg-danger/90 text-white hover:bg-danger;
+  }
+  .btn-warn {
+    @apply btn bg-warn/90 text-black hover:bg-warn;
+  }
+  .input {
+    @apply w-full rounded-lg bg-surface-1 border border-border px-3 py-2 text-sm text-zinc-100
+           placeholder:text-zinc-600 focus:outline-none focus:border-brand/60 focus:ring-1 focus:ring-brand/40
+           transition-colors;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium;
+  }
+  .label {
+    @apply text-[11px] uppercase tracking-wider text-zinc-500 font-medium;
+  }
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+.drag {
+  -webkit-app-region: drag;
+}
