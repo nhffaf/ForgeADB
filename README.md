@@ -1,5 +1,9 @@
 # ForgeADB
 
+<p align="center">
+  <img src="https://i.ibb.co/hR9srJdh/app-icon.png" alt="ForgeADB icon" width="96" />
+</p>
+
 A modern, visual **ADB / Fastboot toolkit** for Android devices — single-click actions
 for tasks that normally require cryptic command-line incantations.
 
@@ -10,6 +14,10 @@ works out of the box — no separate ADB installation required.
 > The original spec called for Tauri v2. Because this build machine has no Rust/MSVC
 > toolchain, the app was implemented on **Electron** instead (Node-only build), keeping
 > the exact requested frontend stack and a clean Rust-free path to a working `.exe`.
+
+## Screenshot
+
+![ForgeADB screenshot](https://i.ibb.co/Y7r0GRH3/351-B3095-25-C3-49-D2-8-FF0-03111-A74-F16-F.png)
 
 ## Features
 
